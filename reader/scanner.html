@@ -45,25 +45,25 @@
         <input type="button" value="Stop" onclick="stop();"  style="position:absolute;right:0;top:0;"/>
     </div>
     <div id="home">
-        <h1>Animated QR Code Reader</h1>
-        <input type="button" value="Start Scanning" onclick="startScanning();" />
+        <h1>动态二维码文件接收</h1>
+        <input type="button" value="开始接收" onclick="startScanning();" />
         </br>
-        <input type="checkbox" id="continuousChk" value="continuous" checked>
-        <label for="continuousChk">Continuous Scan</label>
-        <input type="checkbox" id="scandirectChk" value="scandirect" checked>
-        <label for="scandirectChk">Use scan-directly</label>
-        <input type="checkbox" id="largeBlockSizeChk" value="largeBlockSize" checked>
-        <label for="largeBlockSizeChk">Large block size</label>
-        <input type="checkbox" id="scanRegionChk" value="Region" checked>
-        <label for="scanRegionChk">Regional Scanning</label>
+        <input type="checkbox" style="display: none;" id="continuousChk" value="continuous">
+        <label for="continuousChk" style="display: none;" >Continuous Scan</label>
+        <input type="checkbox" id="scandirectChk" value="scandirect" style="display: none;"  checked>
+        <label for="scandirectChk" style="display: none;" >Use scan-directly</label>
+        <input type="checkbox" id="largeBlockSizeChk" value="largeBlockSize" style="display: none;"  checked>
+        <label for="largeBlockSizeChk" style="display: none;">Large block size</label>
+        <input type="checkbox" id="scanRegionChk" value="Region" style="display: none;" checked>
+        <label for="scanRegionChk" style="display: none;">Regional Scanning</label>
         </br>
-        <input type="checkbox" id="templateChk" value="Template">
-        <label for="templateChk">Use template</label>
-        </br>
-        Decode file:
-        <input type="file" id="file" onchange="decodefile()"/>
-        <p>Template:</p>
-        <textarea>
+        <input type="checkbox" id="templateChk" value="Template" style="display: none;">
+       <label for="templateChk" style="display: none;">Use template</label>
+      </br>
+      <p style="display: none;">Decode file:<p>
+        <input type="file" id="file" onchange="decodefile()" style="display: none;" />
+        <p style="display: none;" >Template:</p>
+        <textarea style="display: none;" >
         {
   "ImageParameter": {
     "BarcodeColourModes": [
@@ -240,7 +240,7 @@
         </pre>
     </div>
     <div id="decodedResults">
-        Results:
+	<p>文件列表:</p>
         <ol id="decodedList">
         </ol>
     </div>
