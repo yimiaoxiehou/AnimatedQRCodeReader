@@ -331,9 +331,11 @@
     function processRead(result){
         var text = result["barcodeText"];
         try {
+            // 数据格式   index/total|rawData
             var meta = text.split("|")[0];
             var totalOfThisOne = parseInt(meta.split("/")[1]);
             if (total!=0){
+                // 总页数不同，重置旧数据
                 if (total != totalOfThisOne){
                     total = totalOfThisOne;
                     code_results={};
